@@ -1550,7 +1550,7 @@ if __name__ == '__main__':
               event.set()
               ts = time()
               while time() < ts + timer:
-                  print(f'{bcolors.FAIL}RETAX Attack To Ip:{bcolors.OKCYAN} %s,{bcolors.FAIL} Port:{bcolors.OKCYAN} %s,{bcolors.FAIL} Method:{bcolors.OKCYAN} %s{bcolors.FAIL} PPS:{bcolors.OKCYAN} %s,{bcolors.FAIL} BPS:{bcolors.OKCYAN} %s / %d%%{bcolors.RESET}' %
+                  print(f'{bcolors.OKCYAN}[ + ]{bcolors.FAIL} RETAX Attack To Ip:{bcolors.OKCYAN} %s,{bcolors.FAIL} Port:{bcolors.OKCYAN} %s,{bcolors.FAIL} Method:{bcolors.OKCYAN} %s{bcolors.FAIL} PPS:{bcolors.OKCYAN} %s,{bcolors.FAIL} BPS:{bcolors.OKCYAN} %s / %d%%{bcolors.RESET}' %
                                (target or url.host,
                                 port or (url.port or 80),
                                 method,
