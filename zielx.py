@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-#CREDIT ZIELX
+#Code By MHProDev
+#Remake By ZieLx
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import suppress
